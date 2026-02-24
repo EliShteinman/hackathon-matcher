@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 
 class ExcelSettings(BaseSettings):
-    model_config = ConfigDict(env_prefix="EXCEL__")
+    model_config = ConfigDict(env_prefix="EXCEL__", extra="ignore")
 
     sheet_name: str | None = Field(default=None, description="Sheet name (None for first sheet)")
     column_id_number: str = Field(default="מספר זהות", description="Column name for ID number")
