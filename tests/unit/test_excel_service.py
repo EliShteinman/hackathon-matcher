@@ -42,7 +42,7 @@ class TestImportFromBytes:
     async def test_valid_import(self, excel_service, mock_user_repo):
         data = create_test_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
                 ["111", "a@t.com", "Alice", "TLV", "050"],
                 ["222", "b@t.com", "Bob", "JLM", "051"],
             ]
@@ -54,7 +54,7 @@ class TestImportFromBytes:
     async def test_missing_required_column(self, excel_service):
         data = create_test_excel(
             [
-                ["id_number", "email", "full_name"],
+                ["מספר זהות", "email", "שם מלא"],
                 ["111", "a@t.com", "Alice"],
             ]
         )
@@ -68,7 +68,7 @@ class TestImportFromBytes:
     async def test_skips_invalid_rows(self, excel_service, mock_user_repo):
         data = create_test_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
                 ["111", "a@t.com", "Alice", "TLV", "050"],
                 ["", "b@t.com", "Bob", "JLM", "051"],
                 ["333", "c@t.com", "Carol", "Haifa", None],
@@ -85,7 +85,7 @@ class TestImportFromBytes:
     async def test_no_valid_rows_raises(self, excel_service):
         data = create_test_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
             ]
         )
         with pytest.raises(InvalidExcelFormatError):

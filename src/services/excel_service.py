@@ -43,7 +43,7 @@ class ExcelService:
             "email": self._settings.column_email,
             "full_name": self._settings.column_full_name,
             "branch": self._settings.column_branch,
-            "phone": self._settings.column_phone,
+            "class_name": self._settings.column_class_name,
         }
 
         required_fields = ["id_number", "email", "full_name", "branch"]
@@ -81,7 +81,7 @@ class ExcelService:
                     email=validated.email,
                     full_name=validated.full_name,
                     branch=validated.branch,
-                    phone=validated.phone,
+                    class_name=validated.class_name,
                 )
             )
 

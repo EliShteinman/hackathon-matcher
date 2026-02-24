@@ -133,7 +133,7 @@ const Match = {
                     <p class="text-gray-700"><strong>שם:</strong> ${info.partner_name}</p>
                     <p class="text-gray-700"><strong>סניף:</strong> ${info.partner_branch}</p>
                     ${info.partner_email ? `<p class="text-gray-700"><strong>אימייל:</strong> ${info.partner_email}</p>` : ''}
-                    ${info.partner_phone ? `<p class="text-gray-700"><strong>טלפון:</strong> ${info.partner_phone}</p>` : ''}
+                    ${info.partner_class_name ? `<p class="text-gray-700"><strong>כיתה:</strong> ${info.partner_class_name}</p>` : ''}
                 </div>
                 ${info.is_initiator ? `
                     <button id="btn-cancel-matched" class="btn-danger mt-6">ביטול שותפות</button>

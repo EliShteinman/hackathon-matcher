@@ -25,9 +25,9 @@ class TestExcelImportFlow:
 
         data = make_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
-                ["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "050-1111"],
-                ["222222222", "bob@test.com", "Bob Levy", "Jerusalem", "050-2222"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
+                ["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "A1"],
+                ["222222222", "bob@test.com", "Bob Levy", "Jerusalem", "B2"],
                 ["333333333", "carol@test.com", "Carol Shapira", "Haifa", None],
             ]
         )
@@ -45,8 +45,8 @@ class TestExcelImportFlow:
 
         data = make_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
-                ["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "050-1111"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
+                ["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "A1"],
             ]
         )
         await service.import_from_bytes(data)
@@ -55,8 +55,8 @@ class TestExcelImportFlow:
 
         data2 = make_excel(
             [
-                ["id_number", "email", "full_name", "branch", "phone"],
-                ["111111111", "alice_new@test.com", "Alice Cohen Updated", "Ramat Gan", "050-9999"],
+                ["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"],
+                ["111111111", "alice_new@test.com", "Alice Cohen Updated", "Ramat Gan", "C3"],
             ]
         )
         await service.import_from_bytes(data2)

@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     email           TEXT    NOT NULL,
     full_name       TEXT    NOT NULL,
     branch          TEXT    NOT NULL,
-    phone           TEXT,
+    class_name      TEXT,
     status          TEXT    NOT NULL DEFAULT 'available'
                             CHECK(status IN ('available', 'pending', 'matched')),
     created_at      TEXT    NOT NULL DEFAULT (datetime('now')),

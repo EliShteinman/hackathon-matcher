@@ -26,7 +26,7 @@ class TemplateRenderer:
         )
 
     def render_match_approved(
-        self, initiator_name: str, target_name: str, target_branch: str, target_email: str, target_phone: str
+        self, initiator_name: str, target_name: str, target_branch: str, target_email: str
     ) -> str:
         template = self._env.get_template("match_approved.html")
         return template.render(
@@ -34,7 +34,6 @@ class TemplateRenderer:
             target_name=target_name,
             target_branch=target_branch,
             target_email=target_email,
-            target_phone=target_phone,
         )
 
     def render_match_rejected(self, initiator_name: str, target_name: str) -> str:

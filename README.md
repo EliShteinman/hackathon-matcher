@@ -36,15 +36,16 @@ Edit `.env` with your values:
 
 ### Excel Column Mapping
 
-If your Excel has different column names, configure via env vars:
+Default columns match the standard Hebrew template: `שם מלא`, `מספר זהות`, `email`, `סטטוס שידוך`, `סניף מכינה`, `כיתה`.
+
+To override column names, configure via env vars:
 
 ```
-EXCEL__COLUMN_ID_NUMBER=תעודת_זהות
-EXCEL__COLUMN_EMAIL=אימייל
-EXCEL__COLUMN_FULL_NAME=שם_מלא
-EXCEL__COLUMN_BRANCH=סניף
-EXCEL__COLUMN_PHONE=טלפון
-EXCEL__SHEET_NAME=Sheet1
+EXCEL__COLUMN_ID_NUMBER="מספר זהות"
+EXCEL__COLUMN_EMAIL=email
+EXCEL__COLUMN_FULL_NAME="שם מלא"
+EXCEL__COLUMN_BRANCH="סניף מכינה"
+EXCEL__COLUMN_CLASS_NAME="כיתה"
 ```
 
 ## Running

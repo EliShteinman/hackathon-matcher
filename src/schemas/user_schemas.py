@@ -20,7 +20,7 @@ class UserDetailResponse(BaseModel):
     email: str
     full_name: str
     branch: str
-    phone: str | None
+    class_name: str | None
     status: UserStatus
 
 
@@ -40,7 +40,7 @@ class UserMeResponse(BaseModel):
     full_name: str
     branch: str
     email: str
-    phone: str | None
+    class_name: str | None
     status: UserStatus
     match_info: "MatchInfoResponse | None" = None
 
@@ -52,6 +52,6 @@ class MatchInfoResponse(BaseModel):
     partner_name: str
     partner_branch: str
     partner_email: str | None = None
-    partner_phone: str | None = None
+    partner_class_name: str | None = None
     is_initiator: bool
     status: str

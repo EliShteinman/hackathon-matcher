@@ -21,7 +21,7 @@ class SQLiteUserRepository(UserRepositoryInterface):
             email=row["email"],
             full_name=row["full_name"],
             branch=row["branch"],
-            phone=row["phone"],
+            class_name=row["class_name"],
             status=UserStatus(row["status"]),
             created_at=datetime.fromisoformat(row["created_at"]) if row["created_at"] else None,
             updated_at=datetime.fromisoformat(row["updated_at"]) if row["updated_at"] else None,
@@ -69,16 +69,16 @@ class SQLiteUserRepository(UserRepositoryInterface):
         for user in users:
             cursor = await self._db.execute(
                 """
-                INSERT INTO users (id_number, email, full_name, branch, phone, status, created_at, updated_at)
+                INSERT INTO users (id_number, email, full_name, branch, class_name, status, created_at, updated_at)
                 VALUES (?, ?, ?, ?, ?, 'available', ?, ?)
                 ON CONFLICT(id_number) DO UPDATE SET
                     email = excluded.email,
                     full_name = excluded.full_name,
                     branch = excluded.branch,
-                    phone = excluded.phone,
+                    class_name = excluded.class_name,
                     updated_at = ?
                 """,
-                (user.id_number, user.email, user.full_name, user.branch, user.phone, now, now, now),
+                (user.id_number, user.email, user.full_name, user.branch, user.class_name, now, now, now),
             )
             count += cursor.rowcount
         await self._db.commit()

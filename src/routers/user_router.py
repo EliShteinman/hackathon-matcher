@@ -44,7 +44,7 @@ async def get_me(
             partner_name=partner.full_name,
             partner_branch=partner.branch,
             partner_email=partner.email if active_match.status.value == "approved" else None,
-            partner_phone=partner.phone if active_match.status.value == "approved" else None,
+            partner_class_name=partner.class_name if active_match.status.value == "approved" else None,
             is_initiator=is_initiator,
             status=active_match.status.value,
         )
@@ -54,7 +54,7 @@ async def get_me(
         full_name=user.full_name,
         branch=user.branch,
         email=user.email,
-        phone=user.phone,
+        class_name=user.class_name,
         status=user.status,
         match_info=match_info,
     )

@@ -60,7 +60,6 @@ class EmailService:
             target_name=target.full_name,
             target_branch=target.branch,
             target_email=target.email,
-            target_phone=target.phone or "",
         )
         await self._send_email(
             to_address=initiator.email,

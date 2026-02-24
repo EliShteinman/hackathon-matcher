@@ -38,6 +38,6 @@ class AdminUserItem(BaseModel):
     email: str
     full_name: str
     branch: str
-    phone: str | None
+    class_name: str | None
     status: UserStatus
     partner_name: str | None = None

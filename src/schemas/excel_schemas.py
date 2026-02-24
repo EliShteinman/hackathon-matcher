@@ -8,4 +8,4 @@ class ExcelRowSchema(BaseModel):
     email: str = Field(...)
     full_name: str = Field(..., min_length=1)
     branch: str = Field(...)
-    phone: str | None = Field(default=None)
+    class_name: str | None = Field(default=None)

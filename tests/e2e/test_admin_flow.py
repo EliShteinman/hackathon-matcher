@@ -66,8 +66,8 @@ class TestAdminFlow:
 
         wb = Workbook()
         ws = wb.active
-        ws.append(["id_number", "email", "full_name", "branch", "phone"])
-        ws.append(["666666666", "frank@test.com", "Frank New", "Eilat", "050-6666"])
+        ws.append(["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"])
+        ws.append(["666666666", "frank@test.com", "Frank New", "Eilat", "D4"])
         buf = io.BytesIO()
         wb.save(buf)
 

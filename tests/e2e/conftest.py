@@ -55,10 +55,10 @@ async def client(app) -> AsyncGenerator[AsyncClient, None]:
 async def seeded_client(client: AsyncClient) -> AsyncClient:
     wb = Workbook()
     ws = wb.active
-    ws.append(["id_number", "email", "full_name", "branch", "phone"])
-    ws.append(["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "050-1111"])
-    ws.append(["222222222", "bob@test.com", "Bob Levy", "Jerusalem", "050-2222"])
-    ws.append(["333333333", "carol@test.com", "Carol Shapira", "Haifa", "050-3333"])
+    ws.append(["מספר זהות", "email", "שם מלא", "סניף מכינה", "כיתה"])
+    ws.append(["111111111", "alice@test.com", "Alice Cohen", "Tel Aviv", "A1"])
+    ws.append(["222222222", "bob@test.com", "Bob Levy", "Jerusalem", "B2"])
+    ws.append(["333333333", "carol@test.com", "Carol Shapira", "Haifa", "A1"])
     buf = io.BytesIO()
     wb.save(buf)
     buf.seek(0)

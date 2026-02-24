@@ -46,12 +46,12 @@ async def settings_repo(db: aiosqlite.Connection) -> SQLiteSettingsRepository:
 def sample_users() -> list[User]:
     return [
         User(
-            id_number="111111111", email="alice@test.com", full_name="Alice Cohen", branch="Tel Aviv", phone="050-111"
+            id_number="111111111", email="alice@test.com", full_name="Alice Cohen", branch="Tel Aviv", class_name="A1"
         ),
-        User(id_number="222222222", email="bob@test.com", full_name="Bob Levy", branch="Jerusalem", phone="050-222"),
-        User(id_number="333333333", email="carol@test.com", full_name="Carol Shapira", branch="Haifa", phone="050-333"),
+        User(id_number="222222222", email="bob@test.com", full_name="Bob Levy", branch="Jerusalem", class_name="B2"),
+        User(id_number="333333333", email="carol@test.com", full_name="Carol Shapira", branch="Haifa", class_name="A1"),
         User(id_number="444444444", email="dave@test.com", full_name="Dave Mizrahi", branch="Beer Sheva"),
-        User(id_number="555555555", email="eve@test.com", full_name="Eve Goldberg", branch="Tel Aviv", phone="050-555"),
+        User(id_number="555555555", email="eve@test.com", full_name="Eve Goldberg", branch="Tel Aviv", class_name="C3"),
     ]
 
 

@@ -81,9 +81,10 @@ const Admin = {
                                 <thead>
                                     <tr class="border-b border-gray-200">
                                         <th class="text-right py-2 px-2">שם</th>
-                                        <th class="text-right py-2 px-2">סניף</th>
+                                        <th class="text-right py-2 px-2">סניף מכינה</th>
+                                        <th class="text-right py-2 px-2">כיתה</th>
                                         <th class="text-right py-2 px-2">אימייל</th>
-                                        <th class="text-right py-2 px-2">סטטוס</th>
+                                        <th class="text-right py-2 px-2">סטטוס שידוך</th>
                                         <th class="text-right py-2 px-2">שותף/ה</th>
                                     </tr>
                                 </thead>
@@ -92,6 +93,7 @@ const Admin = {
                                         <tr class="border-b border-gray-100 hover:bg-gray-50">
                                             <td class="py-2 px-2">${u.full_name}</td>
                                             <td class="py-2 px-2">${u.branch}</td>
+                                            <td class="py-2 px-2">${u.class_name || '-'}</td>
                                             <td class="py-2 px-2 text-xs">${u.email}</td>
                                             <td class="py-2 px-2">
                                                 <span class="${Utils.getStatusClass(u.status)}">${Utils.getStatusLabel(u.status)}</span>

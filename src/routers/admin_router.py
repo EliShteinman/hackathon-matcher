@@ -94,7 +94,7 @@ async def get_all_users(
                 email=user.email,
                 full_name=user.full_name,
                 branch=user.branch,
-                phone=user.phone,
+                class_name=user.class_name,
                 status=user.status,
                 partner_name=partner_name,
             )
