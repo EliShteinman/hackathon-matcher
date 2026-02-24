@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Arial, sans-serif; direction: rtl; text-align: right; background-color: #f9fafb; padding: 20px;">
+  <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <h2 style="color: #1e293b; margin-bottom: 8px;">שלום {{ target_name }},</h2>
+    <p style="color: #475569; font-size: 16px; line-height: 1.6;">
+      <strong>{{ initiator_name }}</strong> מסניף <strong>{{ initiator_branch }}</strong> רוצה להיות השותף/ה שלך בהאקתון!
+    </p>
+    <p style="color: #475569; font-size: 16px; line-height: 1.6;">
+      לחץ/י על אחד הכפתורים למטה כדי לאשר או לדחות את הבקשה:
+    </p>
+    <div style="text-align: center; margin: 32px 0;">
+      <a href="{{ approve_url }}" style="display: inline-block; background-color: #16a34a; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0 8px;">
+        אישור שותפות
+      </a>
+      <a href="{{ reject_url }}" style="display: inline-block; background-color: #dc2626; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0 8px;">
+        דחיית בקשה
+      </a>
+    </div>
+    <p style="color: #94a3b8; font-size: 13px;">הקישור תקף ל-72 שעות.</p>
+  </div>
+</body>
+</html>

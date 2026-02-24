@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Arial, sans-serif; direction: rtl; text-align: right; background-color: #f9fafb; padding: 20px;">
+  <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 12px; padding: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <h2 style="color: #16a34a; margin-bottom: 8px;">מזל טוב! {{ initiator_name }}</h2>
+    <p style="color: #475569; font-size: 16px; line-height: 1.6;">
+      <strong>{{ target_name }}</strong> אישר/ה את השותפות שלכם בהאקתון!
+    </p>
+    <div style="background-color: #f0fdf4; border-radius: 8px; padding: 20px; margin: 24px 0;">
+      <h3 style="color: #166534; margin: 0 0 12px 0;">פרטי השותף/ה:</h3>
+      <p style="color: #475569; margin: 4px 0;"><strong>שם:</strong> {{ target_name }}</p>
+      <p style="color: #475569; margin: 4px 0;"><strong>סניף:</strong> {{ target_branch }}</p>
+      <p style="color: #475569; margin: 4px 0;"><strong>אימייל:</strong> {{ target_email }}</p>
+      {% if target_phone %}
+      <p style="color: #475569; margin: 4px 0;"><strong>טלפון:</strong> {{ target_phone }}</p>
+      {% endif %}
+    </div>
+    <p style="color: #475569; font-size: 16px;">בהצלחה בהאקתון!</p>
+  </div>
+</body>
+</html>
