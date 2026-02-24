@@ -59,6 +59,24 @@ uvicorn src.app.main:create_app --factory --reload --host 0.0.0.0 --port 8000
 
 Open http://localhost:8000 in your browser.
 
+## Docker
+
+```bash
+# Copy and edit environment configuration
+cp .env.example .env
+
+# Build and start
+docker compose up -d --build
+
+# View logs
+docker compose logs -f
+
+# Stop
+docker compose down
+```
+
+SQLite data persists in a Docker volume (`hackathon-data`).
+
 ## Usage
 
 ### Admin Setup

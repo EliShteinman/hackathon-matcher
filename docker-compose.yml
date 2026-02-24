@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      DATABASE__PATH: /app/data/hackathon_matcher.db
+      LOGGING__FILE_PATH: /app/data/hackathon_matcher.log
+    volumes:
+      - hackathon-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  hackathon-data:
